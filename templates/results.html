@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <link rel="stylesheet" href="/static/styles/results.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Results</h1>
+        
+        <div class="score-card card">
+            <h2>Your Score: {{ score }}/{{ total_questions }}</h2>
+            <p class="percentage">{{ (score/total_questions*100)|round|int }}%</p>
+        </div>
+        
+        <div class="results">
+            {% for result in results %}
+            <div class="card result-item {% if result.is_correct %}correct{% else %}incorrect{% endif %}">
+                <h3>Question {{ loop.index }}: {{ result.question }}</h3>
+                <p>Your answer <span class="user-answer {% if result.is_correct %}correct{% else %}incorrect{% endif %}">{{ result.user_answer }}: {{ result.user_answer_text }}</span></p>
+                <p>Correct answer <span class="correct-answer">{{ result.correct_answer }}: {{ result.correct_answer_text }}</span></p>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <a href="/" class="button">Take Another Quiz</a>
+    </div>
+</body>
+</html>
