@@ -35,18 +35,19 @@ h1 {
     margin-bottom: 25px;
 }
 
-button {
-    background: linear-gradient(to right, #6e8efb, #a777e3);
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4CAF50;
     color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
     border: none;
-    border-radius: 8px;
-    padding: 12px 25px;
-    font-size: 16px;
-    font-weight: 600;
     cursor: pointer;
 }
 
-button:hover {
+.button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px LightSlateGrey;
 }

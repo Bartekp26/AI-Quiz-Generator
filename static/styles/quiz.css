@@ -1,5 +1,4 @@
 h2 {
-    color: #4a4a4a;
     margin-bottom: 25px;
     font-size: 20px;
 }
@@ -28,8 +27,7 @@ h2 {
     text-align: center;
 }
 
-button {
-    padding: 15px 30px;
+.button {
     font-size: 18px;
     width: 200px;
 }

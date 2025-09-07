@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>{{topic}} Quiz</h1>
+        <h1>{{ topic }} Quiz</h1>
         <form method="post" action="/results">
             {% for q in quiz %}
             <div class="card">
@@ -18,12 +18,17 @@
                 <label class="option-item"><input type="radio" name="answer{{ loop.index0 }}" value="B">B) {{ q.b }}</label>
                 <label class="option-item"><input type="radio" name="answer{{ loop.index0 }}" value="C">C) {{ q.c }}</label>
                 <label class="option-item"><input type="radio" name="answer{{ loop.index0 }}" value="D">D) {{ q.d }}</label>
+                
                 <input type="hidden" name="correct{{ loop.index0 }}" value="{{ q.correct }}">
                 <input type="hidden" name="question_text{{ loop.index0 }}" value="{{ q.question }}">
+                <input type="hidden" name="option_a{{ loop.index0 }}" value="{{ q.a }}">
+                <input type="hidden" name="option_b{{ loop.index0 }}" value="{{ q.b }}">
+                <input type="hidden" name="option_c{{ loop.index0 }}" value="{{ q.c }}">
+                <input type="hidden" name="option_d{{ loop.index0 }}" value="{{ q.d }}">
             </div>
             {% endfor %}
             <input type="hidden" name="total_questions" value="{{ quiz|length }}">
-            <div class="submit-container card"><button type="submit">Finish</button></div>
+            <div class="submit-container"><button type="submit" class="button">Finish</button></div>
         </form>
     </div>
 </body>
