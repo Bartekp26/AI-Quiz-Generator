@@ -1,0 +1,20 @@
+Question: What is the correct file extension for Python files?
+A) .pyth
+B) .pt
+C) .py
+D) .pyt
+Correct: C
+
+Question: Which of the following is used to define a function in Python?
+A) function
+B) def
+C) fun
+D) define
+Correct: B
+
+Question: What is the output of print(2 ** 3) in Python?
+A) 5
+B) 6
+C) 8
+D) 9
+Correct: C
